@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>servlet</servlet-name>
+        <servlet-class>br.edu.ifpr.irati.ads.servlet.Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servlet</servlet-name>
+        <url-pattern>/servlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>servletAno</servlet-name>
+        <servlet-class>br.edu.ifpr.irati.ads.servlet.ServletAno</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletAno</servlet-name>
+        <url-pattern>/servletAno</url-pattern>
+    </servlet-mapping>         
+
+    <servlet>
+        <servlet-name>CewolfServlet</servlet-name>
+        <servlet-class>de.laures.cewolf.CewolfRenderer</servlet-class>
+        <init-param>
+            <param-name>storage</param-name>
+            <param-value>de.laures.cewolf.storage.TransientSessionStorage</param-value>
+        </init-param>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CewolfServlet</servlet-name>
+        <url-pattern>/cewolf/*</url-pattern>
+    </servlet-mapping>
+</web-app>
